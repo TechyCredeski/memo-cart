@@ -6,6 +6,7 @@ function App() {
 
   return (
     <>
+    <button className='viewCrt'>View Cart</button>
     <Cart/>
     <Products/>
     </>
