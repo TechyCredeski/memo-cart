@@ -8,7 +8,7 @@ const [product, setProduct] = useState([]);
 useEffect(() => {
     try{
         axios
-    .get("https://fakestoreapi.com/products?limit=5")
+    .get("https://fakestoreapi.com/products?limit=8")
     .then((response) => {
         console.log(response.data);
         setProduct(response.data)
