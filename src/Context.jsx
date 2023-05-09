@@ -24,6 +24,16 @@ switch (action.type) {
     });
     return increaseState;
 
+    case 'DECREASE':
+        const decreaseState = state.map((currentProduct) => {
+            if (currentProduct.id === action.payload.id) {
+                return { ...currentProduct, quantity: currentProduct.quantity - 1 }
+            } else {
+                return currentProduct;
+            }
+        });
+        return decreaseState;
+
 
 
     default:
