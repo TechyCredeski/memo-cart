@@ -2,13 +2,17 @@ import { createContext, useReducer } from "react";
 
 export const Cartcontext = createContext()
 export const Context = (props) => {
-    const reducerc = [state, action] => {
+    const reducer = (state, action) => {
         switch (action.type) {
+            case "ADD_TO_CART":
+                
+            default: return state
     }
 
     const [state, dispatch] = useReducer(reducer, [])
-    const info ={}
+    const info ={state, dispatch}
     return (
-        <Cartcontext.Provider value={state}>{props.children}</Cartcontext.Provider>
+        <Cartcontext.Provider value={info}>{props.children}</Cartcontext.Provider>
     )
+}
 }
