@@ -11,7 +11,7 @@ function App() {
   }
   return (
     <>
-    <button className='viewCrt' onClick={handleCart}>View Cart</button>
+    <button className='viewCrt' onClick={handleCart}>{showCart? 'X': 'View Cart'}</button>
     {showCart? <Cart/> : <Products/>}
     </>
   )
