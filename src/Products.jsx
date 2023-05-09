@@ -1,25 +1,37 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 export default function Products() {
-    const [product, setProduct] = useState([])
+const [product, setProduct] = useState([]);
 
-    useEffect(() => {
-        try {
-            axios.get("https://fakestoreapi.com/products?limit=5")
-            .then(function(response) {
-                console.log(response)
-                setProduct(response.data)
-            })
-        } catch(error) {
-            console.log(error)
-        }
-    })
+useEffect(() => {
+    try{
+        axios
+    .get("https://fakestoreapi.com/products?limit=5")
+    .then((response) => {
+        console.log(response.data);
+        setProduct(response.data)
+    }
+)}catch(error) {
+    console.log(error);
+}
+}, [])
 
-    return (
-        <div>
-        <div>Products:</div>
-        <div>{product}</div>
-        </div>
-    )
+
+return (
+<div>
+    <div>
+    {product.map((currentProduct) => {
+return (
+<div key={currentProduct.id} className="productContainer">
+    < img src={currentProduct.image} alt={currentProduct.title} className="productImg"/>
+    <h4 className="productTitle">{currentProduct.title}</h4>
+    <p className="productPrice">${currentProduct.price}</p>
+</div>
+);
+})}
+
+    </div>
+</div>
+);
 }
