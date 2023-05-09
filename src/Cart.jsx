@@ -40,9 +40,13 @@ return (
                 </div>
             )        
         })}
-    </div>
 
-        <h1>{total}</h1>
+        {state.length > 0 && (
+            <div>
+                <h1>{total}</h1>
+            </div>
+        )}
+    </div>
 </div>
 );
 }
