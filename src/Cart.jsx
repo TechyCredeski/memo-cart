@@ -3,7 +3,7 @@ import React from 'react'
 export default function Cart() {
 return (
 <div>
-    <button >View Cart</button>
+    <button className='viewCrt'>View Cart</button>
 </div>
 )
 }
