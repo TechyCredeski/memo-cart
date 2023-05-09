@@ -25,6 +25,7 @@
 width: 100%;
 height: 200px;
 border-radius: 5px;
+margin-bottom: 10px;
 }
 
 .cartBtn {
@@ -44,6 +45,11 @@ border-radius: 5px;
     color: #2e2c2c;
 }
 
+
+.crtCon{
+    width: 100%;
+    margin-top: 20px;
+}
 .crtTitle {
     width: 100%;
     background-color: rgb(243, 219, 219);
@@ -51,3 +57,12 @@ border-radius: 5px;
     text-align: center;
     padding: 10px;
 }
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

@@ -12,16 +12,19 @@ const total = state.reduce((total, currentProduct) => {
     }, 0)
 
 return (
-<div>
+<div className='crtMain'>
     <h1 className='crtTitle'>Cart</h1>
-    <div>
+    <div className='crtCon'>
         {state.map((currentProduct, index) => {
             return (
                 <div key={index} className='cartItem'>
-                    <img src={currentProduct.image} alt="" />
-                    <h4>{currentProduct.title}</h4>
-                    <p>{currentProduct.price * currentProduct.quantity}</p>
+                    <div>
+                    <img src={currentProduct.image} alt=""  className='productImg'/>
+                    <h3>{currentProduct.title}</h3>
+                    </div>
+                    <p>${currentProduct.price * currentProduct.quantity}</p>
 
+                    <div>
                     <button onClick={() => dispatch({type: 'INCREASE', payload: currentProduct})}>+</button>
                     <p>{currentProduct.quantity}</p>
                     <button onClick={() => {
@@ -32,7 +35,7 @@ return (
                         }
                         
                     }}>-</button>
-                    <p></p>
+                    </div>
                     <div>
                     <button className="cartBtn" onClick={() => dispatch({type: 'REMOVE_FROM_CART', payload: currentProduct})}>Remove</button>
                     </div>
