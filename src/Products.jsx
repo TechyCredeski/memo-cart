@@ -6,7 +6,7 @@ export default function Products() {
 
     useEffect(() => {
         try {
-            axios.get("https://fakestoreapi.com/products")
+            axios.get("https://fakestoreapi.com/products?limit=5")
             .then(function(response) {
                 console.log(response)
             })
