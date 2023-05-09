@@ -31,7 +31,7 @@ return (
     <h4 className="productTitle">{currentProduct.title}</h4>
     <p className="productPrice">${currentProduct.price}</p>
 
-    <button className="cartBtn">Add to cart</button>
+    <button className="cartBtn" onClick={() => dispatch({type: 'ADD_TO_CART', payload: currentProduct})}>Add to cart</button>
 </div>
 );
 })}
