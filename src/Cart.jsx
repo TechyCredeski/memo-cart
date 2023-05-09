@@ -21,7 +21,14 @@ return (
 
                     <button onClick={() => dispatch({type: 'INCREASE', payload: currentProduct})}>+</button>
                     <p>{currentProduct.quantity}</p>
-                    <button onClick={() => dispatch({type: 'DECREASE', payload: currentProduct})}>-</button>
+                    <button onClick={() => {
+                        if (currentProduct.quantity > 1) {
+                            dispatch({type: 'DECREASE', payload: currentProduct})
+                        } else {
+                            dispatch({type: 'REMOVE_FROM_CART', payload: currentProduct})
+                        }
+                        
+                    }}>-</button>
                     <p></p>
                     <div>
                     <button className="cartBtn" onClick={() => dispatch({type: 'REMOVE_FROM_CART', payload: currentProduct})}>Remove</button>
@@ -29,6 +36,8 @@ return (
                     
                 </div>
             )
+
+            
         })}
     </div>
 </div>
