@@ -9,7 +9,7 @@ const [cart, setCart] = useState([]);
 
 return (
 <div>
-    <h1>Cart</h1>
+    <h1 className='crtTitle'>Cart</h1>
 </div>
 );
 }
