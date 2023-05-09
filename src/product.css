@@ -43,3 +43,11 @@ border-radius: 5px;
     background-color: rgb(243, 219, 219);
     color: #2e2c2c;
 }
+
+.crtTitle {
+    width: 100%;
+    background-color: rgb(243, 219, 219);
+    color: #2e2c2c;
+    text-align: center;
+    padding: 10px;
+}
