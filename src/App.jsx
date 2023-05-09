@@ -1,14 +1,18 @@
 import Products from './Products'
 import Cart from './Cart'
+import { useState } from 'react'
 
 
 function App() {
+  const [showCart, setShowCart] = useState(false);
 
+  function handleCart() {
+    setShowCart(!showCart);
+  }
   return (
     <>
-    <button className='viewCrt'>View Cart</button>
-    <Cart/>
-    <Products/>
+    <button className='viewCrt' onClick={handleCart}>View Cart</button>
+    {showCart? <Cart/> : <Products/>}
     </>
   )
 }
