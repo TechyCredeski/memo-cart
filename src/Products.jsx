@@ -21,10 +21,13 @@ useEffect(() => {
 
 const Globalstate = useContext(Cartcontext);
 const dispatch = Globalstate.dispatch;
+
+
 return (
 <div>
     <div className="majorCon">
     {product.map((currentProduct) => {
+        currentProduct.quantity = 1;
 return (
 <div key={currentProduct.id} className="productContainer">
     < img src={currentProduct.image} alt={currentProduct.title} className="productImg"/>
