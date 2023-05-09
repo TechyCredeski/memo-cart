@@ -34,6 +34,10 @@ switch (action.type) {
         });
         return decreaseState;
 
+        case 'REMOVE_FROM_CART':
+        const removeState = state.filter((currentProduct) => currentProduct.id !== action.payload.id);
+        return removeState;
+
 
 
     default:
