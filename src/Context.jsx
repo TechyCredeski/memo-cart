@@ -1,10 +1,10 @@
 import { createContext } from "react";
 
-export const cartContext = createContext()
-export const context = (props) => {
+export const Cartcontext = createContext()
+export const Context = (props) => {
 
     const state = []
     return (
-        <cartContext.Provider value={state}>{props.children}</cartContext.Provider>
+        <Cartcontext.Provider value={state}>{props.children}</Cartcontext.Provider>
     )
 }
