@@ -21,7 +21,7 @@ useEffect(() => {
 
 return (
 <div>
-    <div>
+    <div className="majorCon">
     {product.map((currentProduct) => {
 return (
 <div key={currentProduct.id} className="productContainer">
