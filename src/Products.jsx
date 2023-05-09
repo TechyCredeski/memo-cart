@@ -20,7 +20,7 @@ useEffect(() => {
 }, [])
 
 const Globalstate = useContext(Cartcontext);
-console.log(Globalstate)
+const dispatch = Globalstate.dispatch;
 return (
 <div>
     <div className="majorCon">
