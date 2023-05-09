@@ -1,10 +1,15 @@
+import React from 'react'
 import Products from './Products'
+import Cart from './Cart'
 
 
 function App() {
 
   return (
+    <>
+    <Cart/>
     <Products/>
+    </>
   )
 }
 
