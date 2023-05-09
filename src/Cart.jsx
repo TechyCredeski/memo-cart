@@ -7,10 +7,13 @@ const Globalstate = useContext(Cartcontext);
 const state = Globalstate.state;
 const dispatch = Globalstate.dispatch;
 
+const total = state.reduce((total, currentProduct) => {
+        return total+currentProduct.price * currentProduct.quantity
+    }, 0)
+
 return (
 <div>
     <h1 className='crtTitle'>Cart</h1>
-
     <div>
         {state.map((currentProduct, index) => {
             return (
@@ -35,11 +38,11 @@ return (
                     </div>
                     
                 </div>
-            )
-
-            
+            )        
         })}
     </div>
+
+        <h1>{total}</h1>
 </div>
 );
 }
