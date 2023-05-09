@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import Products from './Products';
 import './product.css'
 
 export default function Cart(props) {
