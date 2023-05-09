@@ -1,6 +1,7 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import './product.css'
+import { Cartcontext } from "./Context";
 
 export default function Products() {
 const [product, setProduct] = useState([]);
@@ -18,7 +19,8 @@ useEffect(() => {
 }
 }, [])
 
-
+const Globalstate = useContext(Cartcontext);
+console.log(Globalstate)
 return (
 <div>
     <div className="majorCon">
