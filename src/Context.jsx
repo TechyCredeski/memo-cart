@@ -1,3 +1,4 @@
+import { current } from "@reduxjs/toolkit";
 import { createContext, useReducer } from "react";
 
 export const Cartcontext = createContext();
@@ -6,8 +7,13 @@ export const Context = (props) => {
 const reducer = (state, action) => {
 switch (action.type) {
     case "ADD_TO_CART":
-    // TODO: handle adding item to cart
-    return state;
+    const tempState = state.filter((currentProduct) => action.payload.id === currentProduct.id);
+    if (tempState.length > 0) {
+        return state;
+    } else {
+        return [...state, action.payload]
+    }
+    
     default:
     return state;
 }
