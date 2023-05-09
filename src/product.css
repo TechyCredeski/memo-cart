@@ -34,3 +34,12 @@ border-radius: 5px;
     height: 30px;
     border-radius: 5px;
 }
+
+.viewCrt {
+    width: 10%;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 88.6%;
+    background-color: rgb(243, 219, 219);
+    color: #2e2c2c;
+}
