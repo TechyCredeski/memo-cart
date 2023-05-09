@@ -21,7 +21,7 @@ return (
 
                     <button onClick={() => dispatch({type: 'INCREASE', payload: currentProduct})}>+</button>
                     <p>{currentProduct.quantity}</p>
-                    <button>-</button>
+                    <button onClick={() => dispatch({type: 'DECREASE', payload: currentProduct})}>-</button>
                     <p></p>
                     <div>
                     <button className="cartBtn" onClick={() => dispatch({type: 'REMOVE_FROM_CART', id: currentProduct.id})}>Remove</button>

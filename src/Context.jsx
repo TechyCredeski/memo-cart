@@ -14,6 +14,18 @@ switch (action.type) {
         return [...state, action.payload]
     }
     
+    case 'INCREASE':
+    const increaseState = state.map((currentProduct) => {
+        if (currentProduct.id === action.payload.id) {
+            return { ...currentProduct, quantity: currentProduct.quantity + 1 }
+        } else {
+            return currentProduct;
+        }
+    });
+    return increaseState;
+
+
+
     default:
     return state;
 }
