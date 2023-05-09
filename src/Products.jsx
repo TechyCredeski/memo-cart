@@ -28,6 +28,8 @@ return (
     < img src={currentProduct.image} alt={currentProduct.title} className="productImg"/>
     <h4 className="productTitle">{currentProduct.title}</h4>
     <p className="productPrice">${currentProduct.price}</p>
+
+    <button className="cartBtn">Add to cart</button>
 </div>
 );
 })}
