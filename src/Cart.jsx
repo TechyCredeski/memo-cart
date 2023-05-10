@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Cartcontext } from './Context';
 import './product.css'
 
-export default function Cart() {
+export default function Cart() {    
 const Globalstate = useContext(Cartcontext);
 const state = Globalstate.state;
 const dispatch = Globalstate.dispatch;
