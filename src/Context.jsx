@@ -1,4 +1,3 @@
-import { current } from "@reduxjs/toolkit";
 import { createContext, useReducer } from "react";
 
 export const Cartcontext = createContext();
