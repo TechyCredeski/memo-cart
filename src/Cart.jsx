@@ -9,7 +9,7 @@ const dispatch = Globalstate.dispatch;
 
 const total = state.reduce((total, currentProduct) => {
         return total+currentProduct.price * currentProduct.quantity
-    }, 0)
+    }, 0).toFixed(2)
 
 return (
 <div className='crtMain'>
