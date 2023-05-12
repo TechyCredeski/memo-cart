@@ -1,3 +1,3 @@
-#Basic product cart feature with useMemo hook
+#Basic product cart 
 
 ##Simple functionality, UI to be added later
